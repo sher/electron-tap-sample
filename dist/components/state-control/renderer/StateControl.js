@@ -76,7 +76,8 @@ var StateControl = function (_Component) {
       );
 
       var style = {
-        height: '60px'
+        height: '60px',
+        padding: '10px'
       };
 
       return _react2.default.createElement(

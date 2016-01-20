@@ -42,7 +42,8 @@ export default class StateControl extends Component {
     const button = <button ref='button' onClick={this.changeSwitchState}>{buttonText}</button>
 
     const style = {
-      height: '60px'
+      height: '60px',
+      padding: '10px'
     };
 
     return (

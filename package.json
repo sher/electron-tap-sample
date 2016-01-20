@@ -4,21 +4,20 @@
   "description": "Sample electron application tested with tape",
   "main": "dist/index.js",
   "scripts": {
-    "start": "./node_modules/.bin/electron --enable-logging .",
-    "dev": "rm -rf dist && ./node_modules/.bin/gulp",
-    "dist": "rm -rf dist && ./node_modules/.bin/gulp dist",
-    "test": "npm test"
+    "start": "electron --enable-logging .",
+    "test:renderer": "electron-tap --renderer='test/**/renderer/*test.js?(x)'",
+    "test:browser": "electron-tap --browser 'test/**/browser/*test.js'"
   },
   "repository": {
     "type": "git",
-    "url": "https://tundrax@github.com/tundrax/electron-tap-sample.git"
+    "url": "https://github.com/tundrax/electron-tap-sample.git"
   },
   "keywords": [
     "electron",
     "tape",
     "react"
   ],
-  "author": "Sherzod Kuchkarov <sherzod@gmail.com>",
+  "author": "Sherzod Kuchkarov <sherzod@gmail.com> (https://github.com/tundrax)",
   "license": "MIT",
   "dependencies": {
     "babel-preset-react": "^6.3.13",
@@ -29,6 +28,7 @@
     "react-dom": "^0.14.6"
   },
   "devDependencies": {
+    "electron-tap": "^0.1.4",
     "gulp": "^3.9.0",
     "gulp-babel": "^6.1.1",
     "gulp-changed": "^1.3.0",
